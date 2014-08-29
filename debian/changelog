@@ -1,3 +1,60 @@
+talloc (2.1.1-2) unstable; urgency=low
+
+  * Use canonical URL in Vcs-Git.
+  * Specify branch in Vcs-Git.
+  * libtalloc-dev: Install talloc_guide.txt.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sat, 05 Jul 2014 23:40:00 +0200
+
+talloc (2.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Mon, 02 Jun 2014 01:22:09 +0200
+
+talloc (2.1.0-2) unstable; urgency=medium
+
+  * Change maintainer to Samba Debian maintainers.
+  * Bump standards version to 3.9.5 (no changes).
+  * Run testsuite from autopkgtest.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sat, 12 Apr 2014 16:08:49 +0200
+
+talloc (2.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+   + Drop 08_waf_python_config: now applied upstream.
+  * Bump standards version to 3.9.4 (no changes).
+  * Update Vcs header now that repository is in git.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sat, 14 Sep 2013 13:03:51 +0100
+
+talloc (2.0.8-1) unstable; urgency=low
+
+  [ Jelmer Vernooij ]
+  * Bump standards version to 3.9.3 (no changes).
+  * Use parseable copyright file format.
+  * Properly clean up after build.
+  * Migrate to Git.
+
+  [ Christian Perrier ]
+  * Use versioned license link in debian/copyright
+
+  [ Jelmer Vernooij ]
+  * Use dpkg-buildflags, enables hardening.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Tue, 10 Apr 2012 20:25:09 +0200
+
+talloc (2.0.8-0.1) unstable; urgency=low
+
+  [ Andrew Bartlett ]
+  * Non-maintainer upload with maintainer's agreement.
+  * New upstream release.
+   + Add 08_waf_python_config to cope with python-config no longer
+     being a script.
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 16 Feb 2013 12:44:12 +0100
+
 talloc (2.0.7+git20120207-1) unstable; urgency=low
 
   * New upstream snapshot.
