@@ -1,12 +1,13 @@
 #!/usr/bin/make -f
 
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 
 CFLAGS += -g -Wall
-LDFLAGS += -Wl,--as-needed
 
 DESTDIR=$(CURDIR)/debian/tmp
 
@@ -26,7 +27,7 @@ override_dh_python2:
 	dh_python2 --no-guessing-versions
 
 override_dh_auto_configure:
-	LDFLAGS="$(LDFLAGS)" PYTHON="$(PYTHON)" PYTHON_CONFIG="$(PYTHON_CONFIG)" CFLAGS="$(CFLAGS)" ./configure $(conf_args)
+	LDFLAGS="$(LDFLAGS)" PYTHON="$(PYTHON)" PYTHON_CONFIG="$(PYTHON_CONFIG)" CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" ./configure $(conf_args)
 
 override_dh_auto_build:
 	$(MAKE) all
@@ -51,7 +52,6 @@ override_dh_auto_clean:
 		buildtools/wafadmin/Tools/*.pyc
 
 override_dh_auto_install:
-	mkdir -p $(DESTDIR)`swig -swiglib`
 	$(MAKE) install DESTDIR=$(DESTDIR)
 	# Waf really should be doing this:
 	ar -rc libtalloc.a bin/default/talloc_*.o

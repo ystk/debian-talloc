@@ -1,3 +1,39 @@
+talloc (2.1.2-0+deb8u1) jessie-security; urgency=high
+
+  [ Andrew Bartlett ]
+  * Update to stable required for Samba security release.
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 12 Apr 2016 00:01:10 +0200
+
+talloc (2.1.2-3) unstable; urgency=medium
+
+  * Add patch reproducible-build: use set time in manpage, make build
+    reproducible. Closes: #782864
+  * Fix ordering of paragraphs in debian/copyright.
+  * Stop creating empty swig directory.
+  * Drop unused swig dependency.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sun, 26 Apr 2015 09:58:25 +0000
+
+talloc (2.1.2-2) unstable; urgency=medium
+
+  * Make libtalloc2-dbg Multi-Arch: same.
+  * Fix lib/replace/ paths in debian/copyright.
+  * Pass CPPFLAGS onto configure to enable hardening.
+  * Add patch revert-ldflags-atend: Revert upstream change to add
+    LDFLAGS at end of LDFLAGS command-line. This broke use of
+    --Wl,--as-needed.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sat, 25 Apr 2015 13:22:20 +0000
+
+talloc (2.1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump standards version to 3.9.6.
+  * Add short copyright license name for libreplace/timegm.c.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sun, 15 Mar 2015 02:57:19 +0100
+
 talloc (2.1.1-2) unstable; urgency=low
 
   * Use canonical URL in Vcs-Git.

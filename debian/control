@@ -4,8 +4,8 @@ Priority: optional
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Uploaders: Jelmer Vernooij <jelmer@debian.org>, Christian Perrier <bubulle@debian.org>
 Homepage: http://talloc.samba.org/
-Build-Depends: debhelper (>= 8.1.3), docbook-xml, docbook-xsl, xsltproc, libpopt-dev, swig, python-all (>= 2.6.6-3), python-all-dev (>= 2.6.6-3)
-Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 8.1.3), docbook-xml, docbook-xsl, xsltproc, libpopt-dev, python-all (>= 2.6.6-3), python-all-dev (>= 2.6.6-3)
+Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/pkg-samba/talloc.git -b unstable
 XS-Testsuite: autopkgtest
 
@@ -21,6 +21,7 @@ Description: hierarchical pool based memory allocator
 
 Package: libtalloc2-dbg
 Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Section: debug
 Priority: extra
 Depends: libtalloc2 (= ${binary:Version}), ${misc:Depends}
